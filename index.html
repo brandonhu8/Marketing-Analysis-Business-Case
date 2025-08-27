@@ -1,1 +1,220 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socio-Demographic Variables and Salary</title>
+    <style>
+        /* CSS style to set the background color to cream */
+        body {
+            background-color: #FDF2E9; /* Cream background color */
+            margin: 0; /* Remove default body margin */
+            padding-left: 200px; /* Remove default body padding */
+            padding-right: 200px;
+            padding-top: 50px;
+            padding-bottom: 200px;
+            font-size: 20px;
+        }
 
+
+        /* Add other CSS styles for headings, paragraphs, etc. as needed */
+        h1, h2, h3 {
+            color: #333; /* Heading text color */
+        }
+        p {
+            color: #444; /* Paragraph text color */
+        }
+        h1:first-of-type {
+        text-decoration: underline;
+        text-align: center;
+    }
+ 
+        #topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #FFEB99, white); /* Use linear gradient for the background, from yellow (#FFEB99) to white */
+            padding: 5px;
+            border-radius: 0;
+            z-index: 9999; /* Set a higher z-index to make it go over the other elements */
+        }
+
+        /* CSS style for the links within the top bar */
+        #topbar a {
+            display: inline-block;
+            color: black; /* Set the text color of the links to black */
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        /* Add spacing to the content below the top bar */
+        #content {
+
+   Position: relative;
+            padding-top: 40px; /* Adjust this value as needed */
+        }
+
+
+        #topbar a:hover {
+            background-color: #F9C22E; /* Set the background color to a lighter shade of yellow */
+            border-radius: 5px; /* Add some rounded corners for a subtle effect */
+   cursor: pointer;
+        }
+
+        /* Styles for smaller screen sizes */
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 16px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        /* Styles for larger screen sizes */
+        @media screen and (min-width: 1000px) {
+            body {
+                font-size: 20px;
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+
+            #viz1690601837560 object {
+                width: 1000px;
+                height: 827px;
+            }
+        }
+
+        #viz1690601837560 {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
+        .interactable-text {
+            text-align: center;
+        }
+ 
+    </style>
+
+
+    <script>
+        // JavaScript function to handle smooth scrolling with slower speed
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="topbar">
+        <ul>
+            <a   onclick="scrollToSection('viz1690601837560')">Tableau Dashboard</a>
+            <a   onclick="scrollToSection('introduction-section')">Introduction</a>
+            <a   onclick="scrollToSection('data-cleaning-section')">Data Cleaning</a>
+            <a   onclick="scrollToSection('visualizations-section')">The Visualizations</a>
+            <a   onclick="scrollToSection('conclusion-section')">Conclusion</a>
+        </ul>
+    </div>
+    <h1>How Salary Is Effected By Socio-Demographic Variables</h1>
+    <div class='tableauPlaceholder' id='viz1690601837560' style='position: relative'><noscript><a href='#'><img alt='Dashboard '
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;So&#47;Socio-DemographicVariablesandSalary&#47;Dashboard1&#47;1_rss.png'
+        style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Socio-DemographicVariablesandSalary&#47;Dashboard1' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;So&#47;Socio-DemographicVariablesandSalary&#47;Dashboard1&#47;1.png' />
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                
+            <script type='text/javascript'>                    var divElement = document.getElementById('viz1690601837560');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 )
+            { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 )
+            { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1927px';}                    
+            var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                  
+             vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<p class="interactable-text"> ***This Dashboard Is Interactable And Is Best Viewed On Desktop***</p>
+    <h2 id="introduction-section">Introduction</h2>
+    <p>Over the past decade, especially in recent years, we have seen various factors affecting a person's salary. Does your degree dictate how much you will make? Or your experience? 
+        Or it could be some other factor.</p>
+    <p>In this project, I will use a dataset that focuses on salary and demographic information with additional details on years of experience. 
+        This dataset will help us find the relationship between income and various socio-demographic variables. During this project, we will use LiveSQL, Excel, and Tableau to help 
+        us uncover patterns and correlations and shed light on income disparities and socio-economic dynamics.</p>
+
+    <h2 id="data-cleaning-section">Data Cleaning</h2>
+    <h3>Introducing and Importing Our Dataset</h3>
+    <p>This is a sample from our dataset. This dataset contains around 900 data points that look just like the rows you see below.</p>
+    <img src="Images\Datacleaning.jpeg" alt="image_description">
+
+    <p>Before we even start working on the data itself, we encounter our very first problem. You cannot upload an Excel file directly to LiveSQL to populate a table. Of course, we can use a different platform, 
+        such as MySQL and SQL Server, that accepts Excel files, but for learning purposes, we will use LiveSQL to learn how to import data for a different platform. We have to create a table using this query:</p>
+    <img src="Images\Createtable.jpeg" alt="image_description">
+
+    <p>To efficiently populate the table in LiveSQL with values from the Excel file, we'll first add an ID column to track each row's uniqueness. Next, we'll address the variations in the Education Level for 
+        the same degree by creating a VLOOKUP function in Excel. This function will standardize the Education Level values, ensuring consistency throughout the dataset. Additionally, it will handle the apostrophe 
+        issue by adding an extra apostrophe where necessary to avoid any interference with the INSERT INTO clause's syntax.</p>
+    <img src="Images\Vlookup.jpeg" alt="image_description">
+
+    <p>Once the Excel sheet has been updated with the standardized and corrected values, we can write the INSERT INTO function once and populate this function for the rest of the data. 
+        We will then run this function in LiveSQL to populate the employee_data table with the data points.</p>
+   
+
+    <p>Function that will be used to populate the table in LiveSQL:</p>
+    <img src="Images\FillFunction.jpeg" alt="image_description">
+
+    <p>I then copy and paste all of the INSERT INTO queries in LiveSQL and populate the employee_data table that we created in the first step. Below is a sample of how it looks in LiveSQL:</p>
+    <img src="Images\Originaltable.jpeg" alt="image_description">
+
+    <h3>Removing Duplicates</h3>
+    <p>One of my main concerns for this data set is the possibility of duplicate rows. Now that we have imported the data into LiveSQL, we can determine whether or not duplicates are using the query below:</p>
+
+    <div class="image-container">
+        <img src="Images\removingduplicates.jpeg" alt="Image 1 Description">
+    </div>
+    <!-- Second Image -->
+    <div class="image-container">
+        <img src="Images\Duplicatesoutput.jpeg" alt="Image 2 Description">
+    </div>
+    <p>From the sample of the output above, we can see many duplicates. Duplicates exaggerate the data toward a certain value, creating inaccuracy and lowering the integrity of the dataset, 
+        which is why we must remove them. To remove the duplicates, we will use the query below:</p>
+    <img src="Images\Delete rows.jpeg" alt="image_description">
+
+<h2 id ="visualizations-section">The Visualizations</h2>
+<h3>Tableau Dashboard</h3>
+    <p>I can easily compare and contrast the effects of different socio-demographic variables on salary levels by presenting my data in visualizations. Using this dashboard, we can analyze the different patterns, 
+        correlations, and areas of concern related to salary disparities. This could lead us to make more informed decisions when compensating and increasing the diversity of our workplaces.</p>
+
+    <p>I created the graphs on this dashboard to investigate the impact of various socio-demographic variables and factors on salary levels within the dataset. The first graph, "Average Salary By Country," 
+        enables me to compare the average salary across different countries, which helps identify variations in compensation based on location. The average wages for each country can also represent the country's 
+        economic status.</p>
+
+    <p>The second graph, "Average Salary By Years of Experience," allows me to explore the relationship between experience and salary. In this graph, I can analyze the expertise of someone working in a 
+        particular profession and how much they are being rewarded for their expertise.</p>
+
+    <p>In the third graph, "Average Salary By Country Including Gender," I built on my first graph but introduced another variable, gender. This visualization allows me to compare the average salaries across 
+        countries while also seeing if the average wages in countries vary for different genders.</p>
+
+    <p>Lastly, the "Average Salary By Race" graph helps me investigate whether or not there are any salary differences across racial groups. This graph could potentially shed light on any racial wage gaps that 
+        could exist in any country.</p>
+
+<h2 id = "conclusion-section">Conclusion</h2>
+<h3>The Takeaways</h3>
+    <p>In this project, I leveraged my Data Analytics skills to create meaningful information and visualization with a large dataset. I started by cleaning the data using Excel, ensuring it was reliable. 
+        Then, I tried a different method of importing the dataset into LiveSQL to learn something new and expand my knowledge. </p>
+
+    <p>After getting the dataset in order, I continued my data cleaning and focused on finding and eliminating any duplicates in LiveSQL. Having clean data was essential for meaningful analysis. 
+        With a solid dataset, I created visualizations that showcased how different socio-demographic variables affect salary. </p>
+
+    <p>All those visualizations were combined in a Tableau dashboard, making it easy for anyone to explore and analyze how different factors relate to salary. The goal was to give users an interactive experience 
+        to dig into the data and see the connections between socio-demographic factors and earnings. Throughout this project, I embraced the challenges and took the opportunity to 
+        learn new platforms and techniques. </p>
+
+</body>
+</html>
